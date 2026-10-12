@@ -1,0 +1,49 @@
+{
+  "records": 37025424,
+  "days": 267,
+  "sensors": 963,
+  "calibration": {
+    "reference_occupancy": 0.2552,
+    "cutoffs_ci": [
+      0.374607,
+      0.469435,
+      0.999999
+    ]
+  },
+  "level_share_percent_all_days": {
+    "LOW": 90.182,
+    "MODERATE": 4.935,
+    "HIGH": 3.917,
+    "SEVERE": 0.967
+  },
+  "n_peak_cells": 34,
+  "peak_percentile": 80,
+  "top5_sensors": [
+    {
+      "sensor_id": 401434,
+      "pct_high_or_severe": 44.4783,
+      "mean_occupancy": 0.1234000027179718
+    },
+    {
+      "sensor_id": 400696,
+      "pct_high_or_severe": 41.2635,
+      "mean_occupancy": 0.10540000349283218
+    },
+    {
+      "sensor_id": 401356,
+      "pct_high_or_severe": 40.9436,
+      "mean_occupancy": 0.14059999585151672
+    },
+    {
+      "sensor_id": 400436,
+      "pct_high_or_severe": 30.181,
+      "mean_occupancy": 0.10080000013113022
+    },
+    {
+      "sensor_id": 401466,
+      "pct_high_or_severe": 25.0858,
+      "mean_occupancy": 0.09830000251531601
+    }
+  ],
+  "sensors_with_over_5pct_high_or_severe": 337
+}

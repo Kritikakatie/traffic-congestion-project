@@ -1,0 +1,85 @@
+# ============================================================================
+# Central configuration. Every tunable of the project lives here.
+# Environment overrides (optional): STREAM_DELAY_SECONDS, KAFKA_BOOTSTRAP_SERVERS,
+# KAFKA_TOPIC, CONFIG_PATH
+# ============================================================================
+paths:                      # relative to the project root
+  raw_dir: data/raw
+  processed_dir: data/processed
+  results_dir: output/results
+  figures_dir: output/results/figures
+  models_dir: output/models
+  alerts_dir: output/alerts
+  stream_dir: output/stream
+
+dataset:
+  name: "UCI PEMS-SF (Caltrans PeMS), occupancy of 963 freeway detectors"
+  slots_per_day: 144        # 10-minute samples per day
+  slot_minutes: 10
+  # The raw files contain NO dates. Approximate calendar dates are reconstructed from the weekday
+  # chain starting here (first day = 2008-01-02, a Wednesday). See README "Dataset findings".
+  nominal_start: "2008-01-02 00:00:00"
+  train_fraction: 0.70      # chronological split by DAY (first 70% of days = train)
+
+congestion:
+  # CI = clip(occupancy / reference, 0, 1); reference = this quantile of TRAIN occupancy
+  reference_quantile: 0.99
+  # LEVEL cut-offs = these quantiles of TRAIN occupancy (converted to CI units)
+  level_quantiles:
+    moderate: 0.90
+    high: 0.95
+    severe: 0.99
+  # Optional manual override (CI units). Example:
+  #   manual: {reference_occupancy: 0.25, cutoffs: [0.35, 0.5, 1.0]}
+  manual: null
+
+peaks:
+  percentile: 80            # (weekday, hour) cells above this percentile of mean CI = peak
+
+statistics:
+  alpha: 0.05
+
+prediction:
+  horizon_slots: 3          # 3 x 10 min = predict congestion level 30 minutes ahead
+  train_samples: 300000
+  test_samples: 150000
+  n_estimators: 60
+  max_depth: 18             # chosen on a validation split of the TRAIN days
+  min_samples_leaf: 20      # (python -m prediction.tune_validation)
+  class_weight: null        # null | balanced_subsample  (balanced was tested and rejected, see tuning results)
+  random_state: 42
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: traffic_data
+  partitions: 3
+  replication_factor: 1
+
+stream:
+  stream_delay_seconds: 0.5 # pause after each 10-minute "tick" (963 messages)
+  start_day: auto           # auto = first WEEKDAY of the held-out test period
+  num_days: 1
+
+spark:
+  trigger_seconds: 3
+  window_duration: "30 minutes"
+  watermark: "10 minutes"
+  shuffle_partitions: 4
+  starting_offsets: earliest
+  driver_memory: "2g"
+  max_offsets_per_trigger: null   # optional cap on records per micro-batch (963 records = one tick)
+
+alerts:
+  min_level: HIGH           # LOW | MODERATE | HIGH | SEVERE
+  clear_after_ticks: 3      # episode ends after this many ticks below min_level
+  cooldown_ticks: 6         # suppress a new alert for the same sensor within N ticks
+
+dashboard:
+  refresh_seconds: 3
+  top_n: 15
+
+benchmark:
+  sizes_days: [1, 4, 7, 15, 36, 72, 267]   # whole days; 1 day = 138,672 records
+  repeats: 3
+  spark_master: "local[*]"
+  scaling_cores: [1, 2, 4]

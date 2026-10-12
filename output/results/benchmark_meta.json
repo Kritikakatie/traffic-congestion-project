@@ -1,0 +1,16 @@
+{
+  "environment": {
+    "cpu_count": 8,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.11",
+    "pandas": "2.3.3",
+    "pyspark": "3.5.9",
+    "ram_gb": 7.8
+  },
+  "repeats": 3,
+  "statistic": "median of repeats",
+  "spark_master": "local[*]",
+  "spark_session_startup_seconds": 5.21,
+  "spark_first_job_seconds": 15.86,
+  "workload": "CI+level per record; weekday x hour profile; per-sensor statistics (read parquet + compute + collect)"
+}

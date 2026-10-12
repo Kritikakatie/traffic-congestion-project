@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/*
+!data/raw/README.txt
+data/processed/
+output/stream/
+output/alerts/*.csv
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc

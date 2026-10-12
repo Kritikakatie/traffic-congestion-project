@@ -1,0 +1,190 @@
+{
+  "H0": "mean occupancy in peak periods == mean occupancy in off-peak periods",
+  "H1": "means differ (two-sided)",
+  "alpha": 0.05,
+  "primary_heldout_test_days": {
+    "n_days": 56,
+    "peak_mean_occupancy": 0.09299552317101449,
+    "offpeak_mean_occupancy": 0.04242943619867596,
+    "mean_difference": 0.05056608697233853,
+    "difference_ci95": [
+      0.04919084103885255,
+      0.05194133290582451
+    ],
+    "paired_t_statistic": 73.68624065034778,
+    "paired_p_value": 1.1621136115391134e-56,
+    "paired_df": 55,
+    "cohens_d_paired": 9.84673809403486,
+    "welch_t_statistic": 69.17092895493893,
+    "welch_p_value": 4.511143662389403e-63,
+    "alpha": 0.05,
+    "reject_H0_paired": true,
+    "reject_H0_welch": true
+  },
+  "comparison_in_sample_all_days": {
+    "n_days": 190,
+    "peak_mean_occupancy": 0.09442693928227332,
+    "offpeak_mean_occupancy": 0.04246345185477485,
+    "mean_difference": 0.05196348742749845,
+    "difference_ci95": [
+      0.05123502629512152,
+      0.05269194855987538
+    ],
+    "paired_t_statistic": 140.71158368837126,
+    "paired_p_value": 2.928021558367176e-193,
+    "paired_df": 189,
+    "cohens_d_paired": 10.208291208128069,
+    "welch_t_statistic": 127.17575500829003,
+    "welch_p_value": 2.019854839297194e-212,
+    "alpha": 0.05,
+    "reject_H0_paired": true,
+    "reject_H0_welch": true
+  },
+  "weekday_vs_weekend": {
+    "weekday_mean": 0.057249518574674876,
+    "weekend_mean": 0.04160398829158901,
+    "n_weekdays": 190,
+    "n_weekend_days": 77,
+    "welch_t_statistic": 35.02453835464687,
+    "welch_p_value": 5.850536520373981e-62,
+    "reject_H0": true
+  },
+  "peak_cells_from_train_days": [
+    {
+      "day": "Monday",
+      "hour": 7
+    },
+    {
+      "day": "Monday",
+      "hour": 8
+    },
+    {
+      "day": "Monday",
+      "hour": 9
+    },
+    {
+      "day": "Monday",
+      "hour": 15
+    },
+    {
+      "day": "Monday",
+      "hour": 16
+    },
+    {
+      "day": "Monday",
+      "hour": 17
+    },
+    {
+      "day": "Tuesday",
+      "hour": 7
+    },
+    {
+      "day": "Tuesday",
+      "hour": 8
+    },
+    {
+      "day": "Tuesday",
+      "hour": 9
+    },
+    {
+      "day": "Tuesday",
+      "hour": 15
+    },
+    {
+      "day": "Tuesday",
+      "hour": 16
+    },
+    {
+      "day": "Tuesday",
+      "hour": 17
+    },
+    {
+      "day": "Tuesday",
+      "hour": 18
+    },
+    {
+      "day": "Wednesday",
+      "hour": 7
+    },
+    {
+      "day": "Wednesday",
+      "hour": 8
+    },
+    {
+      "day": "Wednesday",
+      "hour": 9
+    },
+    {
+      "day": "Wednesday",
+      "hour": 15
+    },
+    {
+      "day": "Wednesday",
+      "hour": 16
+    },
+    {
+      "day": "Wednesday",
+      "hour": 17
+    },
+    {
+      "day": "Wednesday",
+      "hour": 18
+    },
+    {
+      "day": "Thursday",
+      "hour": 7
+    },
+    {
+      "day": "Thursday",
+      "hour": 8
+    },
+    {
+      "day": "Thursday",
+      "hour": 9
+    },
+    {
+      "day": "Thursday",
+      "hour": 15
+    },
+    {
+      "day": "Thursday",
+      "hour": 16
+    },
+    {
+      "day": "Thursday",
+      "hour": 17
+    },
+    {
+      "day": "Thursday",
+      "hour": 18
+    },
+    {
+      "day": "Friday",
+      "hour": 7
+    },
+    {
+      "day": "Friday",
+      "hour": 8
+    },
+    {
+      "day": "Friday",
+      "hour": 14
+    },
+    {
+      "day": "Friday",
+      "hour": 15
+    },
+    {
+      "day": "Friday",
+      "hour": 16
+    },
+    {
+      "day": "Friday",
+      "hour": 17
+    },
+    {
+      "day": "Friday",
+      "hour": 18
+    }
+  ]
+}

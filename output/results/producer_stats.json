@@ -1,0 +1,11 @@
+{
+  "sink": "kafka",
+  "messages_sent": 138672,
+  "errors": 0,
+  "days_replayed": "189-189",
+  "delay_seconds_per_tick": 0.5,
+  "wall_seconds": 128.47,
+  "messages_per_second_wall": 1079.4,
+  "messages_per_second_send_only": 2511.6,
+  "max_speed_mode": false
+}

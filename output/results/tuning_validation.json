@@ -1,0 +1,34 @@
+{
+  "persistence_baseline": {
+    "accuracy": 0.92629,
+    "macro_f1": 0.6408297525607203,
+    "high_or_severe_f1": 0.6832182960749974
+  },
+  "validation_days": "149-186",
+  "candidates": {
+    "RF balanced depth14 leaf50": {
+      "accuracy": 0.87895,
+      "macro_f1": 0.6126131012148741,
+      "high_or_severe_f1": 0.6902879453391898,
+      "fit_seconds": 6.0
+    },
+    "RF unweighted depth14 leaf50": {
+      "accuracy": 0.93488,
+      "macro_f1": 0.6507428856156643,
+      "high_or_severe_f1": 0.696553182491013,
+      "fit_seconds": 9.7
+    },
+    "RF unweighted depth18 leaf20": {
+      "accuracy": 0.93538,
+      "macro_f1": 0.6531396180259745,
+      "high_or_severe_f1": 0.6979652395082662,
+      "fit_seconds": 11.7
+    },
+    "RF balanced depth10 leaf200": {
+      "accuracy": 0.86857,
+      "macro_f1": 0.6011629606521064,
+      "high_or_severe_f1": 0.6834406085430076,
+      "fit_seconds": 8.2
+    }
+  }
+}

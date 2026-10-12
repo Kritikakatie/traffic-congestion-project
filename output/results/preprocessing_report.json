@@ -1,0 +1,32 @@
+{
+  "stored_days": 440,
+  "distinct_days": 267,
+  "duplicate_days_removed": 173,
+  "n_sensors": 963,
+  "slots_per_day": 144,
+  "weekday_chain_score_stored_order": 0.2961,
+  "weekday_chain_score_restored_order": 1.0,
+  "weekday_encoding": {
+    "sunday_label": 1,
+    "mean_occupancy_by_label": {
+      "1": 0.03856,
+      "2": 0.05387,
+      "3": 0.05651,
+      "4": 0.05712,
+      "5": 0.05896,
+      "6": 0.05949,
+      "7": 0.04457
+    }
+  },
+  "removed_day_gaps_in_chain": 6,
+  "invalid_values_repaired": 0,
+  "zero_values_kept": 36694,
+  "occupancy_min": 0.0,
+  "occupancy_max": 1.0,
+  "occupancy_mean": 0.0527375154197216,
+  "train_days": 187,
+  "test_days": 80,
+  "total_records": 37025424,
+  "approx_first_date": "2008-01-02",
+  "approx_last_date": "2008-09-30"
+}

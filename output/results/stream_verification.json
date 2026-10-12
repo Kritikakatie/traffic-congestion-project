@@ -1,0 +1,30 @@
+{
+  "source": "Spark Structured Streaming via OFFLINE file source (no Kafka broker), day 189",
+  "records": 138672,
+  "distinct_sensor_ticks": 138672,
+  "ticks": 144,
+  "days_in_stream": [
+    189
+  ],
+  "max_abs_occupancy_difference_vs_source": 2.8514862027151366e-08,
+  "spark_vs_numpy_level_agreement_percent": 100.0,
+  "level_counts": {
+    "LOW": 124576,
+    "MODERATE": 8355,
+    "HIGH": 5066,
+    "SEVERE": 675
+  },
+  "raw_high_or_severe_sensor_ticks": 5741,
+  "alerts_raised": 977,
+  "alerts_by_type": {
+    "NEW": 860,
+    "ESCALATION": 117
+  },
+  "sensors_alerted": 518,
+  "alert_reduction_factor": 5.9,
+  "micro_batches": 24,
+  "mean_records_per_second": 3062.9,
+  "median_records_per_second": 3063.2,
+  "mean_end_to_end_latency_s": 57.62,
+  "window_rows": 45261
+}

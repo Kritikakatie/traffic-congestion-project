@@ -1,0 +1,9 @@
+{
+  "reference_occupancy": 0.2552,
+  "cutoffs": [
+    0.374607,
+    0.469435,
+    0.999999
+  ],
+  "source": "quantiles of training occupancy"
+}
